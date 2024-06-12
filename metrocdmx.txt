@@ -1,0 +1,448 @@
+# Definir las estaciones de la Línea 1 en orden
+linea_1 = [
+    "observatorio", "tacubaya", "juanacatlan", "chapultepec", "sevilla",
+    "insurgentes", "cuauhtemoc", "balderas", "salto_del_agua", "isabel_la_catolica",
+    "pino_suarez", "merced", "candelaria", "san_lazaro", "moctezuma",
+    "balbuena", "blvd_puerto_aereo", "gomez_farias", "zaragoza", "pantitlan"
+] # Rosa
+
+linea_2 = [
+    "cuatro_caminos", "panteones", "tacuba", "cuitlahuac", "popotla",
+    "colegio_militar", "normal", "san_cosme", "revolucion", "hidalgo",
+    "bellas_artes", "allende", "zocalo_tenochtitlan", "pino_suarez", "san_antonio_abad",
+    "chabacano", "viaducto", "xola", "villa_de_cortes", "nativitas",
+    "portales", "ermita", "general_anaya", "tasquena"
+] # Azul
+
+linea_3 = [
+    "indios_verdes", "deportivo_18_de_marzo", "potrero", "la_raza", "tlatelolco",
+    "guerrero", "hidalgo", "juarez", "balderas", "ninos_heroes",
+    "hospital_general", "centro_medico", "etiopia_plaza_de_la_transparencia", "eugenia", "division_del_norte",
+    "zapata", "coyoacan", "viveros_derechos_humanos", "miguel_angel_de_quevedo", "copilco",
+    "universidad"
+] # Cafe amarillento
+
+linea_4 = [
+    "martin_carrera", "talisman", "bondojito", "consulado", "canal_del_norte",
+    "morelos", "candelaria", "fray_servando", "jamaica", "santa_anita"
+] # verde azul
+
+linea_5 = [
+    "politecnico", "instituto_del_petroleo", "autobuses_del_norte", "la_raza", "misterios",
+    "valle_gomez", "consulado", "eduardo_molina", "aragon", "oceania",
+    "terminal_aerea", "hangares", "pantitlan"
+] # amarillo
+
+linea_6 = [
+    "el_rosario", "tezozomoc", "uam_azcapotzalco", "ferrería_arena_ciudad_de_mexico", "norte_45",
+    "vallejo", "instituto_del_petroleo", "lindavista", "deportivo_18_de_marzo", "la_villa_basilica",
+    "martin_carrera"
+] # Roja
+
+linea_7 = [
+    "el_rosario", "aquiles_serdan", "camarones", "refineria", "tacuba",
+    "san_joaquin", "polanco", "auditorio", "constituyentes", "tacubaya",
+    "san_pedro_de_los_pinos", "san_antonio", "mixcoac", "barranca_del_muerto"
+] # Naranja
+
+linea_8 = [
+    "garibaldi_lagunilla", "bellas_artes", "san_juan_de_letran", "salto_del_agua", "doctores",
+    "obrera", "chabacano", "la_viga", "santa_anita", "coyuya",
+    "iztacalco", "apatlaco", "aculco", "escuadron_201", "atlalilco",
+    "iztapalapa", "cerro_de_la_estrella", "uam_i", "constitucion_de_1917"
+] # verde fuerte
+
+linea_9 = [
+    "tacubaya", "patriotismo", "chilpancingo", "centro_medico", "lazaro_cardenas",
+    "chabacano", "jamaica", "mixiuhca", "velodromo", "ciudad_deportiva",
+    "puebla", "pantitlan"
+] # cafe
+
+linea_12 = [
+    "tlahuac", "tlaltenco", "zapotitlan", "nopalera", "olivos",
+    "tezonco", "periferico_oriente", "calle_11", "lomas_estrella", "san_andres_tomatlan",
+    "culhuacan", "atlalilco", "mexicaltzingo", "ermita", "eje_central",
+    "parque_de_los_venados", "zapata", "hospital_20_de_noviembre", "insurgentes_sur", "mixcoac"
+] # dorado
+
+linea_a = [
+    "pantitlan", "agricola_oriental", "canal_de_san_juan", "tepalcates", "guelatao",
+    "penon_viejo", "acatitla", "santa_marta", "los_reyes", "la_paz"
+] # morado
+
+linea_b = [
+    "buenavista", "guerrero", "garibaldi_lagunilla", "lagunilla", "tepito",
+    "morelos", "san_lazaro", "ricardo_flores_magon", "romero_rubio", "oceania",
+    "deportivo_oceania", "bosque_de_aragon", "villa_de_aragon", "nezahualcoyotl", "impulsora",
+    "rio_de_los_remedios", "muzquiz", "ecatepec", "olimpica", "plaza_aragon",
+    "ciudad_azteca"
+] # verde y gris
+
+conexiones_linea_1 = {
+    "tacubaya": ["linea_7", "linea_9"],
+    "balderas": ["linea_3"],
+    "salto_del_agua": ["linea_8"],
+    "pino_suarez": ["linea_2"],
+    "candelaria": ["linea_4"],
+    "san_lazaro": ["linea_b"],
+    "pantitlan": ["linea_5", "linea_9", "linea_a"]
+}
+
+conexiones_linea_2 = {
+    "tacuba": ["linea_7"],
+    "hidalgo": ["linea_3"],
+    "bellas_artes": ["linea_8"],
+    "pino_suarez": ["linea_1"],
+    "chabacano": ["linea_8", "linea_9"],
+    "ermita": ["linea_12"]
+}
+
+conexiones_linea_3 = {
+    "deportivo_18_de_marzo": ["linea_6"],
+    "la_raza": ["linea_5"],
+    "guerrero": ["linea_b"],
+    "hidalgo": ["linea_2"],
+    "balderas": ["linea_1"],
+    "centro_medico": ["linea_9"],
+    "zapata": ["linea_12"]
+}
+
+conexiones_linea_4 = {
+    "martin_carrera": ["linea_6"],
+    "consulado": ["linea_5"],
+    "morelos": ["linea_b"],
+    "candelaria": ["linea_1"],
+    "jamaica": ["linea_9"],
+    "santa_anita": ["linea_8"]
+}
+
+conexiones_linea_5 = {
+    "instituto_del_petroleo": ["linea_6"],
+    "la_raza": ["linea_3"],
+    "consulado": ["linea_4"],
+    "oceania": ["linea_b"],
+    "pantitlan": ["linea_1", "linea_9", "linea_a"]
+}
+
+conexiones_linea_6 = {
+    "rosario": ["linea_7"],
+    "tacuba": ["linea_2"],
+    "tacubaya": ["linea_1", "linea_9"],
+    "mixcoac": ["linea_12"]
+}
+
+
+conexiones_linea_7 = {
+    "rosario": ["linea_6"],
+    "tacuba": ["linea_2"],
+    "tacubaya": ["linea_1", "linea_9"],
+    "mixcoac": ["linea_12"]
+}
+
+conexiones_linea_8 = {
+    "garibaldi": ["linea_b"],
+    "bellas_artes": ["linea_2"],
+    "salto_del_agua": ["linea_1"],
+    "chabacano": ["linea_2", "linea_9"],
+    "santa_anita": ["linea_4"],
+    "atlalilco": ["linea_12"]
+}
+
+conexiones_linea_9 = {
+    "tacubaya": ["linea_1", "linea_7"],
+    "centro_medico": ["linea_3"],
+    "chabacano": ["linea_2", "linea_8"],
+    "jamaica": ["linea_4"],
+    "pantitlan": ["linea_1", "linea_5", "linea_a"]
+}
+
+conexiones_linea_a = {
+    "pantitlan": ["linea_1", "linea_5", "linea_9"]
+}
+
+conexiones_linea_b = {
+    "guerrero": ["linea_3"],
+    "garibaldi_lagunilla": ["linea_8"],
+    "morelos": ["linea_4"],
+    "san_lazaro": ["linea_1"],
+    "oceania": ["linea_5"]
+}
+
+
+
+
+# Definir las estaciones
+linea_1 = np.array([
+    "observatorio", "tacubaya", "juanacatlan", "chapultepec", "sevilla",
+    "insurgentes", "cuauhtemoc", "balderas", "salto_del_agua", "isabel_la_catolica",
+    "pino_suarez", "merced", "candelaria", "san_lazaro", "moctezuma",
+    "balbuena", "blvd_puerto_aereo", "gomez_farias", "zaragoza", "pantitlan"
+])
+
+linea_2 = np.array([
+    "cuatro_caminos", "panteones", "tacuba", "cuitlahuac", "popotla",
+    "colegio_militar", "normal", "san_cosme", "revolucion", "hidalgo",
+    "bellas_artes", "allende", "zocalo_tenochtitlan", "pino_suarez", "san_antonio_abad",
+    "chabacano", "viaducto", "xola", "villa_de_cortes", "nativitas",
+    "portales", "ermita", "general_anaya", "tasquena"
+])
+
+linea_3 = np.array([
+    "indios_verdes", "deportivo_18_de_marzo", "potrero", "la_raza", "tlatelolco",
+    "guerrero", "hidalgo", "juarez", "balderas", "ninos_heroes",
+    "hospital_general", "centro_medico", "etiopia_plaza_de_la_transparencia", "eugenia", "division_del_norte",
+    "zapata", "coyoacan", "viveros_derechos_humanos", "miguel_angel_de_quevedo", "copilco",
+    "universidad"
+])
+
+linea_4 = np.array([
+    "martin_carrera", "talisman", "bondojito", "consulado", "canal_del_norte",
+    "morelos", "candelaria", "fray_servando", "jamaica", "santa_anita"
+])
+
+linea_5 = np.array([
+    "politecnico", "instituto_del_petroleo", "autobuses_del_norte", "la_raza", "misterios",
+    "valle_gomez", "consulado", "eduardo_molina", "aragon", "oceania",
+    "terminal_aerea", "hangares", "pantitlan"
+])
+
+linea_6 = np.array([
+    "el_rosario", "tezozomoc", "uam_azcapotzalco", "ferreria_arena_ciudad_de_mexico", "norte_45",
+    "vallejo", "instituto_del_petroleo", "lindavista", "deportivo_18_de_marzo", "la_villa_basilica",
+    "martin_carrera"
+])
+
+linea_7 = np.array([
+    "el_rosario", "aquiles_serdan", "camarones", "refineria", "tacuba",
+    "san_joaquin", "polanco", "auditorio", "constituyentes", "tacubaya",
+    "san_pedro_de_los_pinos", "san_antonio", "mixcoac", "barranca_del_muerto"
+])
+
+linea_8 = np.array([
+    "garibaldi_lagunilla", "bellas_artes", "san_juan_de_letran", "salto_del_agua", "doctores",
+    "obrera", "chabacano", "la_viga", "santa_anita", "coyuya",
+    "iztacalco", "apatlaco", "aculco", "escuadron_201", "atlalilco",
+    "iztapalapa", "cerro_de_la_estrella", "uam_i", "constitucion_de_1917"
+])
+
+linea_9 = np.array([
+    "tacubaya", "patriotismo", "chilpancingo", "centro_medico", "lazaro_cardenas",
+    "chabacano", "jamaica", "mixiuhca", "velodromo", "ciudad_deportiva",
+    "puebla", "pantitlan"
+])
+
+linea_12 = np.array([
+    "tlahuac", "tlaltenco", "zapotitlan", "nopalera", "olivos",
+    "tezonco", "periferico_oriente", "calle_11", "lomas_estrella", "san_andres_tomatlan",
+    "culhuacan", "atlalilco", "mexicaltzingo", "ermita", "eje_central",
+    "parque_de_los_venados", "zapata", "hospital_20_de_noviembre", "insurgentes_sur", "mixcoac"
+])
+
+linea_a = np.array([
+    "pantitlan", "agricola_oriental", "canal_de_san_juan", "tepalcates", "guelatao",
+    "penon_viejo", "acatitla", "santa_marta", "los_reyes", "la_paz"
+])
+
+linea_b = np.array([
+    "buenavista", "guerrero", "garibaldi_lagunilla", "lagunilla", "tepito",
+    "morelos", "san_lazaro", "ricardo_flores_magon", "romero_rubio", "oceania",
+    "deportivo_oceania", "bosque_de_aragon", "villa_de_aragon", "nezahualcoyotl", "impulsora",
+    "rio_de_los_remedios", "muzquiz", "ecatepec", "olimpica", "plaza_aragon",
+    "ciudad_azteca"
+])
+
+
+# Definir las conexiones como arreglos de numpy
+conexiones_linea_1 = {
+    "tacubaya": np.array(["linea_7", "linea_9"]),
+    "balderas": np.array(["linea_3"]),
+    "salto_del_agua": np.array(["linea_8"]),
+    "pino_suarez": np.array(["linea_2"]),
+    "candelaria": np.array(["linea_4"]),
+    "san_lazaro": np.array(["linea_b"]),
+    "pantitlan": np.array(["linea_5", "linea_9", "linea_a"])
+}
+
+conexiones_linea_2 = {
+    "tacuba": np.array(["linea_7"]),
+    "hidalgo": np.array(["linea_3"]),
+    "bellas_artes": np.array(["linea_8"]),
+    "pino_suarez": np.array(["linea_1"]),
+    "chabacano": np.array(["linea_8", "linea_9"]),
+    "ermita": np.array(["linea_12"])
+}
+
+conexiones_linea_3 = {
+    "deportivo_18_de_marzo": np.array(["linea_6"]),
+    "la_raza": np.array(["linea_5"]),
+    "guerrero": np.array(["linea_b"]),
+    "hidalgo": np.array(["linea_2"]),
+    "balderas": np.array(["linea_1"]),
+    "centro_medico": np.array(["linea_9"]),
+    "zapata": np.array(["linea_12"])
+}
+
+conexiones_linea_4 = {
+    "martin_carrera": np.array(["linea_6"]),
+    "consulado": np.array(["linea_5"]),
+    "morelos": np.array(["linea_b"]),
+    "candelaria": np.array(["linea_1"]),
+    "jamaica": np.array(["linea_9"]),
+    "santa_anita": np.array(["linea_8"])
+}
+
+conexiones_linea_5 = {
+    "instituto_del_petroleo": np.array(["linea_6"]),
+    "la_raza": np.array(["linea_3"]),
+    "consulado": np.array(["linea_4"]),
+    "oceania": np.array(["linea_b"]),
+    "pantitlan": np.array(["linea_1", "linea_9", "linea_a"])
+}
+
+conexiones_linea_6 = {
+    "rosario": np.array(["linea_7"]),
+    "tacuba": np.array(["linea_2"]),
+    "tacubaya": np.array(["linea_1", "linea_9"]),
+    "mixcoac": np.array(["linea_12"])
+}
+
+conexiones_linea_7 = {
+    "rosario": np.array(["linea_6"]),
+    "tacuba": np.array(["linea_2"]),
+    "tacubaya": np.array(["linea_1", "linea_9"]),
+    "mixcoac": np.array(["linea_12"])
+}
+
+conexiones_linea_8 = {
+    "garibaldi": np.array(["linea_b"]),
+    "bellas_artes": np.array(["linea_2"]),
+    "salto_del_agua": np.array(["linea_1"]),
+    "chabacano": np.array(["linea_2", "linea_9"]),
+    "santa_anita": np.array(["linea_4"]),
+    "atlalilco": np.array(["linea_12"])
+}
+
+conexiones_linea_9 = {
+    "tacubaya": np.array(["linea_1", "linea_7"]),
+    "centro_medico": np.array(["linea_3"]),
+    "chabacano": np.array(["linea_2", "linea_8"]),
+    "jamaica": np.array(["linea_4"]),
+    "pantitlan": np.array(["linea_1", "linea_5", "linea_a"])
+}
+
+conexiones_linea_a = {
+    "pantitlan": np.array(["linea_1", "linea_5", "linea_9"])
+}
+
+conexiones_linea_b = {
+    "guerrero": np.array(["linea_3"]),
+    "garibaldi_lagunilla": np.array(["linea_8"]),
+    "morelos": np.array(["linea_4"]),
+    "san_lazaro": np.array(["linea_1"]),
+    "oceania": np.array(["linea_5"])
+}
+
+conexiones = {
+    1: {
+        "tacubaya": np.array(["linea_7", "linea_9"]),
+        "balderas": np.array(["linea_3"]),
+        "salto_del_agua": np.array(["linea_8"]),
+        "pino_suarez": np.array(["linea_2"]),
+        "candelaria": np.array(["linea_4"]),
+        "san_lazaro": np.array(["linea_b"]),
+        "pantitlan": np.array(["linea_5", "linea_9", "linea_a"])
+    },
+    2: {
+        "tacuba": np.array(["linea_7"]),
+        "hidalgo": np.array(["linea_3"]),
+        "bellas_artes": np.array(["linea_8"]),
+        "pino_suarez": np.array(["linea_1"]),
+        "chabacano": np.array(["linea_8", "linea_9"]),
+        "ermita": np.array(["linea_12"])
+    },
+    3: {
+        "deportivo_18_de_marzo": np.array(["linea_6"]),
+        "la_raza": np.array(["linea_5"]),
+        "guerrero": np.array(["linea_b"]),
+        "hidalgo": np.array(["linea_2"]),
+        "balderas": np.array(["linea_1"]),
+        "centro_medico": np.array(["linea_9"]),
+        "zapata": np.array(["linea_12"])
+    },
+    4: {
+        "martin_carrera": np.array(["linea_6"]),
+        "consulado": np.array(["linea_5"]),
+        "morelos": np.array(["linea_b"]),
+        "candelaria": np.array(["linea_1"]),
+        "jamaica": np.array(["linea_9"]),
+        "santa_anita": np.array(["linea_8"])
+    },
+    5: {
+        "instituto_del_petroleo": np.array(["linea_6"]),
+        "la_raza": np.array(["linea_3"]),
+        "consulado": np.array(["linea_4"]),
+        "oceania": np.array(["linea_b"]),
+        "pantitlan": np.array(["linea_1", "linea_9", "linea_a"])
+    },
+    6: {
+        "rosario": np.array(["linea_7"]),
+        "tacuba": np.array(["linea_2"]),
+        "tacubaya": np.array(["linea_1", "linea_9"]),
+        "mixcoac": np.array(["linea_12"])
+    },
+    7: {
+        "rosario": np.array(["linea_6"]),
+        "tacuba": np.array(["linea_2"]),
+        "tacubaya": np.array(["linea_1", "linea_9"]),
+        "mixcoac": np.array(["linea_12"])
+    },
+    8: {
+        "garibaldi": np.array(["linea_b"]),
+        "bellas_artes": np.array(["linea_2"]),
+        "salto_del_agua": np.array(["linea_1"]),
+        "chabacano": np.array(["linea_2", "linea_9"]),
+        "santa_anita": np.array(["linea_4"]),
+        "atlalilco": np.array(["linea_12"])
+    },
+    9: {
+        "tacubaya": np.array(["linea_1", "linea_7"]),
+        "centro_medico": np.array(["linea_3"]),
+        "chabacano": np.array(["linea_2", "linea_8"]),
+        "jamaica": np.array(["linea_4"]),
+        "pantitlan": np.array(["linea_1", "linea_5", "linea_a"])
+    },
+    'a': {
+        "pantitlan": np.array(["linea_1", "linea_5", "linea_9"])
+    },
+    'b': {
+        "guerrero": np.array(["linea_3"]),
+        "garibaldi_lagunilla": np.array(["linea_8"]),
+        "morelos": np.array(["linea_4"]),
+        "san_lazaro": np.array(["linea_1"]),
+        "oceania": np.array(["linea_5"])
+    },
+    12: {
+        "mixcoac": np.array(["linea_7"]),
+        "zapata": np.array(["linea_3"]),
+        "ermita": np.array(["linea_2"]),
+        "atlalilco": np.array(["linea_8"])
+    }
+}
+
+
+
+
+lineas = {
+    1: linea_1,
+    2: linea_2,
+    3: linea_3,
+    4: linea_4,
+    5: linea_5,
+    6: linea_6,
+    7: linea_7,
+    8: linea_8,
+    9: linea_9,
+    'a': linea_a,
+    'b': linea_b,
+    12: linea_12
+}
